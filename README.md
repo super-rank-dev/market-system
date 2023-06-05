@@ -1,5 +1,7 @@
 # Market System Backend
 
+## Summary
+
 Market System Backend is a system built for managing products, product types, and sales using Laravel, a PHP web application framework.
 
 The project consists of several components, including the `ProductController`, `ProductTypeController`, and `SaleController`, which are responsible for managing and controlling the logic of products, product types, and sales in the system, respectively.
@@ -23,12 +25,21 @@ Server running on `localhost:8000`.
 
 As a test project model, Market System Backend is constructed for only one user.
 
+DB Type: `PostgreSQL`  
+Host: `localhost`  
+Port: `5432`  
+Inital Database: `postgres`  
+User Name: `postgres`  
+Password: `12345`
+
+**Fllow steps provided below**
+
 - `marketdb.sql` is located in root directory.
 - Use db management tool lik `Navicat`, `MySQL Workbench`, `DBeaver`.
 - Create `marketdb` database.
 - In `marketdb`, execute `marketdb.sql` to construct schemas and data.
 
-**OR**
+**Alternatively**
 
 - In your project root directory, open the cmd window
 - run **"php artisan migrate"** to contruct the table schema.
