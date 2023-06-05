@@ -19,7 +19,7 @@
 -- ----------------------------
 -- Sequence structure for failed_jobs_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "failed_jobs_id_seq";
+DROP SEQUENCE IF EXISTS "failed_jobs_id_seq" CASCADE;
 CREATE SEQUENCE "failed_jobs_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -30,7 +30,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for migrations_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "migrations_id_seq";
+DROP SEQUENCE IF EXISTS "migrations_id_seq" CASCADE;
 CREATE SEQUENCE "migrations_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -41,7 +41,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for personal_access_tokens_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "personal_access_tokens_id_seq";
+DROP SEQUENCE IF EXISTS "personal_access_tokens_id_seq" CASCADE;
 CREATE SEQUENCE "personal_access_tokens_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -52,7 +52,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for product_types_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "product_types_id_seq";
+DROP SEQUENCE IF EXISTS "product_types_id_seq" CASCADE;
 CREATE SEQUENCE "product_types_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -63,7 +63,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for products_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "products_id_seq";
+DROP SEQUENCE IF EXISTS "products_id_seq" CASCADE;
 CREATE SEQUENCE "products_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -74,7 +74,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for sales_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "sales_id_seq";
+DROP SEQUENCE IF EXISTS "sales_id_seq" CASCADE;
 CREATE SEQUENCE "sales_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -85,7 +85,7 @@ CACHE 1;
 -- ----------------------------
 -- Sequence structure for users_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "users_id_seq";
+DROP SEQUENCE IF EXISTS "users_id_seq" CASCADE;
 CREATE SEQUENCE "users_id_seq" 
 INCREMENT 1
 MINVALUE  1
@@ -96,7 +96,7 @@ CACHE 1;
 -- ----------------------------
 -- Table structure for failed_jobs
 -- ----------------------------
-DROP TABLE IF EXISTS "failed_jobs";
+DROP TABLE IF EXISTS "failed_jobs" CASCADE;
 CREATE TABLE "failed_jobs" (
   "id" int8 NOT NULL DEFAULT nextval('failed_jobs_id_seq'::regclass),
   "uuid" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -117,7 +117,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for migrations
 -- ----------------------------
-DROP TABLE IF EXISTS "migrations";
+DROP TABLE IF EXISTS "migrations" CASCADE;
 CREATE TABLE "migrations" (
   "id" int4 NOT NULL DEFAULT nextval('migrations_id_seq'::regclass),
   "migration" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -141,7 +141,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for password_reset_tokens
 -- ----------------------------
-DROP TABLE IF EXISTS "password_reset_tokens";
+DROP TABLE IF EXISTS "password_reset_tokens" CASCADE;
 CREATE TABLE "password_reset_tokens" (
   "email" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
   "token" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -158,7 +158,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for personal_access_tokens
 -- ----------------------------
-DROP TABLE IF EXISTS "personal_access_tokens";
+DROP TABLE IF EXISTS "personal_access_tokens" CASCADE;
 CREATE TABLE "personal_access_tokens" (
   "id" int8 NOT NULL DEFAULT nextval('personal_access_tokens_id_seq'::regclass),
   "tokenable_type" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -182,7 +182,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for product_types
 -- ----------------------------
-DROP TABLE IF EXISTS "product_types";
+DROP TABLE IF EXISTS "product_types" CASCADE;
 CREATE TABLE "product_types" (
   "id" int8 NOT NULL DEFAULT nextval('product_types_id_seq'::regclass),
   "name" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -203,7 +203,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for products
 -- ----------------------------
-DROP TABLE IF EXISTS "products";
+DROP TABLE IF EXISTS "products" CASCADE;
 CREATE TABLE "products" (
   "id" int8 NOT NULL DEFAULT nextval('products_id_seq'::regclass),
   "name" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
@@ -228,7 +228,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for sales
 -- ----------------------------
-DROP TABLE IF EXISTS "sales";
+DROP TABLE IF EXISTS "sales" CASCADE;
 CREATE TABLE "sales" (
   "id" int8 NOT NULL DEFAULT nextval('sales_id_seq'::regclass),
   "product_id" int8 NOT NULL,
@@ -257,7 +257,7 @@ COMMIT;
 -- ----------------------------
 -- Table structure for users
 -- ----------------------------
-DROP TABLE IF EXISTS "users";
+DROP TABLE IF EXISTS "users" CASCADE;
 CREATE TABLE "users" (
   "id" int8 NOT NULL DEFAULT nextval('users_id_seq'::regclass),
   "name" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
