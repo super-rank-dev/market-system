@@ -2,6 +2,11 @@
 
 **Using Laravel to build backend part.**
 
+## Server Management
+
+- Run **"php artisan serve"** to run server.
+- Run **"php artisan test"** to test server.
+
 ## DB Management
 
 As a test project model, Market System Backend is constructed for only one user.
@@ -16,10 +21,6 @@ As a test project model, Market System Backend is constructed for only one user.
 - run **"php artisan migrate"** to contruct the table schema.
 - Input table data with CRUD operation provided in UI.
 
-## Server Management
-
-Run **"php artisan serve"** to run server.
-
 ## Project Architecture
 
 - Controller
@@ -28,3 +29,7 @@ Run **"php artisan serve"** to run server.
     - SaleController
 - Routing
     - web.php
+- Test
+    - ProductTest
+    - ProductTypeTest
+    - SaleTest
